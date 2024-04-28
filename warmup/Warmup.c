@@ -1,11 +1,12 @@
 #include <stdio.h>
-#include <ctype.h> // Para usar la función isdigit
+#include <ctype.h> // Para usar la función isalpha
 
 int main() {
     char ingreso;
-
+    
     printf("ml' nob:\n");
-    scanf(" %c", &ingreso); // Usamos %c para leer un carácter
+    scanf(" %c", &ingreso); // Leemos un carácter y un entero
+
     // Verificar si el ingreso es una letra
     if (isalpha(ingreso)) {
         printf("Neh mi'\n");
@@ -41,9 +42,12 @@ int main() {
             case 8:
                 printf("Qapla'\nleghlaHchu'be'chugh mIn lo'laHbe' taj jej.\n");
                 break;
+            default:
+                printf("Qih mi'\n"); // Imprimir mensaje de error si el número no está en el rango
+                break;
         }
     } else {
-        printf("Qih mi'\n");
+        printf("Qih mi'\n"); // Imprimir mensaje de error si el ingreso no es ni letra ni número
     }
 
     return 0;
