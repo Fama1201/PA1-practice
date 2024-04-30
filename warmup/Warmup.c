@@ -1,20 +1,21 @@
 #include <stdio.h>
-#include <ctype.h> // Para usar la función isalpha
-
 int main() {
-    char ingreso;
-    
+    double numero;
+    int numero_entero;
     printf("ml' nob:\n");
-    scanf(" %c", &ingreso); // Leemos un carácter y un entero
-
-    // Verificar si el ingreso es una letra
-    if (isalpha(ingreso)) {
+    if(scanf("%lf",&numero) !=1){
         printf("Neh mi'\n");
-    } else if (ingreso >= '0' && ingreso <= '8') {
-        // Si es un número entre 0 y 8, convertimos el carácter a entero
-        int numero = ingreso - '0';
-
-        switch (numero) {
+        return 0;
+    }
+        numero_entero=numero;
+    if(numero!=numero_entero){
+        printf("bIjatlh 'e' yImev\n");
+        return 0;
+        }
+    if(numero>8 || numero<0){
+        printf("Qih mi' %d\n ", numero_entero);
+    }
+    switch (numero_entero) {
             case 0:
                 printf("Qapla'\nnoH QapmeH wo' Qaw'lu'chugh yay chavbe'lu' 'ej wo' choqmeH may' DoHlu'chugh lujbe'lu'\n");
                 break;
@@ -42,13 +43,6 @@ int main() {
             case 8:
                 printf("Qapla'\nleghlaHchu'be'chugh mIn lo'laHbe' taj jej.\n");
                 break;
-            default:
-                printf("Qih mi'\n"); // Imprimir mensaje de error si el número no está en el rango
-                break;
-        }
-    } else {
-        printf("Qih mi'\n"); // Imprimir mensaje de error si el ingreso no es ni letra ni número
     }
-
     return 0;
 }
