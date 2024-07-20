@@ -53,32 +53,32 @@ int main() {
     int CdepartureTimeInMinutes = Cdepartureh * 60 + Cdeparturem;
 
     // Check transfers for Train A
-    if (AarrivalTimeInMinutes + 5 <= BdepartureTimeInMinutes && AarrivalTimeInMinutes + 180 >= BdepartureTimeInMinutes
-        && AarrivalTimeInMinutes + 5 <= CdepartureTimeInMinutes && AarrivalTimeInMinutes + 180 >= CdepartureTimeInMinutes) {
+    if (AarrivalTimeInMinutes + 5 <= BdepartureTimeInMinutes && AarrivalTimeInMinutes + 180 >= BarrivalTimeInMinutes
+        && AarrivalTimeInMinutes + 5 <= CdepartureTimeInMinutes && AarrivalTimeInMinutes + 180 >= CarrivalTimeInMinutes) {
         puts("Can change to both B and C from A");
-    } else if (AarrivalTimeInMinutes + 5 <= BdepartureTimeInMinutes && AarrivalTimeInMinutes + 180 >= BdepartureTimeInMinutes) {
+    } else if (AarrivalTimeInMinutes + 5 <= BdepartureTimeInMinutes && AarrivalTimeInMinutes + 180 >= BarrivalTimeInMinutes) {
         puts("Can change to B from A");
-    } else if (AarrivalTimeInMinutes + 5 <= CdepartureTimeInMinutes && AarrivalTimeInMinutes + 180 >= CdepartureTimeInMinutes) {
+    } else if (AarrivalTimeInMinutes + 5 <= CdepartureTimeInMinutes && AarrivalTimeInMinutes + 180 >= CarrivalTimeInMinutes) {
         puts("Can change to C from A");
     }
 
     // Check transfers for Train B
-    if (BarrivalTimeInMinutes + 5 <= AdepartureTimeInMinutes && BarrivalTimeInMinutes + 180 >= AdepartureTimeInMinutes
-        && BarrivalTimeInMinutes + 5 <= CdepartureTimeInMinutes && BarrivalTimeInMinutes + 180 >= CdepartureTimeInMinutes) {
+    if (BarrivalTimeInMinutes + 5 <= AdepartureTimeInMinutes && BarrivalTimeInMinutes + 180 >= AarrivalTimeInMinutes
+        && BarrivalTimeInMinutes + 5 <= CdepartureTimeInMinutes && BarrivalTimeInMinutes + 180 >= CarrivalTimeInMinutes) {
         puts("Can change to both A and C from B");
-    } else if (BarrivalTimeInMinutes + 5 <= AdepartureTimeInMinutes && BarrivalTimeInMinutes + 180 >= AdepartureTimeInMinutes) {
+    } else if (BarrivalTimeInMinutes + 5 <= AdepartureTimeInMinutes && BarrivalTimeInMinutes + 180 >= AarrivalTimeInMinutes) {
         puts("Can change to A from B");
-    } else if (BarrivalTimeInMinutes + 5 <= CdepartureTimeInMinutes && BarrivalTimeInMinutes + 180 >= CdepartureTimeInMinutes) {
+    } else if (BarrivalTimeInMinutes + 5 <= CdepartureTimeInMinutes && BarrivalTimeInMinutes + 180 >= CarrivalTimeInMinutes) {
         puts("Can change to C from B");
     }
 
     // Check transfers for Train C
-    if (CarrivalTimeInMinutes + 5 <= AdepartureTimeInMinutes && CarrivalTimeInMinutes + 180 >= AdepartureTimeInMinutes
-        && CarrivalTimeInMinutes + 5 <= BdepartureTimeInMinutes && CarrivalTimeInMinutes + 180 >= BdepartureTimeInMinutes) {
+    if (CarrivalTimeInMinutes + 5 <= AdepartureTimeInMinutes && CarrivalTimeInMinutes + 180 >= AarrivalTimeInMinutes
+        && CarrivalTimeInMinutes + 5 <= BdepartureTimeInMinutes && CarrivalTimeInMinutes + 180 >= BarrivalTimeInMinutes) {
         puts("Can change to both A and B from C");
-    } else if (CarrivalTimeInMinutes + 5 <= AdepartureTimeInMinutes && CarrivalTimeInMinutes + 180 >= AdepartureTimeInMinutes) {
+    } else if (CarrivalTimeInMinutes + 5 <= AdepartureTimeInMinutes && CarrivalTimeInMinutes + 180 >= AarrivalTimeInMinutes) {
         puts("Can change to A from C");
-    } else if (CarrivalTimeInMinutes + 5 <= BdepartureTimeInMinutes && CarrivalTimeInMinutes + 180 >= BdepartureTimeInMinutes) {
+    } else if (CarrivalTimeInMinutes + 5 <= BdepartureTimeInMinutes && CarrivalTimeInMinutes + 180 >= BarrivalTimeInMinutes) {
         puts("Can change to B from C");
     }
 
