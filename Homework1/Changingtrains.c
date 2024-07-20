@@ -54,17 +54,22 @@ if(scanf("%d:%d",&Cdepartureh, &Cdeparturem)!=2 || Cdepartureh>23 ||Cdepartureh<
 // verificar tren A
 
 if(AarrivalTimeInMinutes+5<=BdepartureTimeInMinutes && AarrivalTimeInMinutes+5<=CdepartureTimeInMinutes){
-    puts("Can change to B and C from A");
+    puts("Can change to both B and C from A");
 }else if(AarrivalTimeInMinutes+5<=BdepartureTimeInMinutes){
     puts("Can change to B from A");
 }else if(AarrivalTimeInMinutes+5<=CdepartureTimeInMinutes){
     puts("Can change to C from A");
 }
 
+// verificar tren B 
 
-
-
-
+if(BarrivalTimeInMinutes+5<=AdepartureTimeInMinutes && BarrivalTimeInMinutes+5<=CdepartureTimeInMinutes){
+    puts("Can change to both A and C from B");
+}else if(BarrivalTimeInMinutes+5<=AdepartureTimeInMinutes){
+    puts("Can change to A from B");
+}else if(BarrivalTimeInMinutes+5<=CdepartureTimeInMinutes){
+    puts("Can change to C from B");
+}
 
 
 
