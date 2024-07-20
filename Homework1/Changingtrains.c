@@ -71,7 +71,15 @@ if(BarrivalTimeInMinutes+5<=AdepartureTimeInMinutes && BarrivalTimeInMinutes+5<=
     puts("Can change to C from B");
 }
 
+// verificar tren C
 
+if(CarrivalTimeInMinutes+5<=AdepartureTimeInMinutes && CarrivalTimeInMinutes+5<=BdepartureTimeInMinutes){
+    puts("Can change to both A and B from C");
+}else if(CarrivalTimeInMinutes+5<=AdepartureTimeInMinutes){
+    puts("Can change to A from C");
+}else if(CarrivalTimeInMinutes+5<=BdepartureTimeInMinutes){
+    puts("Can change to B from C");
+}
 
 return 0;
 
