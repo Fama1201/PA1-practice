@@ -44,6 +44,29 @@ int main() {
         return 0;
     }
 
+
+    if(Aarrivalh==0){
+        Aarrivalh=24;
+    }
+    if(Barrivalh==0){
+        Barrivalh=24;
+    }
+    if(Carrivalh==0){
+        Carrivalh=24;
+    }
+
+    if(Adepartureh==0){
+        Adepartureh=24;
+    }
+    if(Bdepartureh==0){
+        Bdepartureh=24;
+    }
+    if(Cdepartureh==0){
+        Cdepartureh=24;
+    }
+
+    //printf("%i %i %i",Aarrivalh,Barrivalh,Carrivalh);
+
     // Convert arrival and departure times to minutes since midnight
     int AarrivalTimeInMinutes = Aarrivalh * 60 + Aarrivalm;
     int AdepartureTimeInMinutes = Adepartureh * 60 + Adeparturem;
@@ -60,7 +83,9 @@ int main() {
         puts("Can change to B from A");
     } else if (AarrivalTimeInMinutes + 5 <= CdepartureTimeInMinutes && AarrivalTimeInMinutes + 180 >= CarrivalTimeInMinutes) {
         puts("Can change to C from A");
-    }
+    }else{
+        puts("No changes available from train A");
+        }
 
     // Check transfers for Train B
     if (BarrivalTimeInMinutes + 5 <= AdepartureTimeInMinutes && BarrivalTimeInMinutes + 180 >= AarrivalTimeInMinutes
@@ -70,7 +95,9 @@ int main() {
         puts("Can change to A from B");
     } else if (BarrivalTimeInMinutes + 5 <= CdepartureTimeInMinutes && BarrivalTimeInMinutes + 180 >= CarrivalTimeInMinutes) {
         puts("Can change to C from B");
-    }
+    }else{
+        puts("No changes available from train B");
+        }
 
     // Check transfers for Train C
     if (CarrivalTimeInMinutes + 5 <= AdepartureTimeInMinutes && CarrivalTimeInMinutes + 180 >= AarrivalTimeInMinutes
@@ -80,7 +107,9 @@ int main() {
         puts("Can change to A from C");
     } else if (CarrivalTimeInMinutes + 5 <= BdepartureTimeInMinutes && CarrivalTimeInMinutes + 180 >= BarrivalTimeInMinutes) {
         puts("Can change to B from C");
-    }
+    }else{
+        puts("No changes available from train C");
+        }
 
     return 0;
 }
